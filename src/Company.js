@@ -33,8 +33,8 @@ const CompanyComponent = (props) => {
           {company.description}
         </Typography>
         {company.flairs &&
-          company.flairs.map((flair) => (
-            <img className={classes.flair} src={flair.path} alt={flair.alt} />
+          company.flairs.map((flair, i) => (
+            <img key={i} className={classes.flair} src={flair.path} alt={flair.alt} />
           ))}
       </div>
       {children}

@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { App } from './App';
+import { Routes } from './Routes';
 import * as serviceWorker from './serviceWorker';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const theme = createMuiTheme({
-    typography: {
-      useNextVariants: true,
-    },
     palette: {
       type: 'dark',
     },
@@ -16,7 +14,8 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
     <MuiThemeProvider theme={theme}>
-        <App />
+        <CssBaseline/>
+        <Routes />
     </MuiThemeProvider>,
     document.getElementById('root')
 );
