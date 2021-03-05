@@ -17,11 +17,11 @@ const RoutesComponent = (props) => {
     <Router>
       <div>
           <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
             <Route path="/books">
               <Books />
+            </Route>
+            <Route path="/">
+              <Home />
             </Route>
           </Switch>
           <BottomNavigation
